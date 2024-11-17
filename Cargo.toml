@@ -1,0 +1,17 @@
+[package]
+name = "clang_log"
+description = "Another log implementation"
+license = "MIT"
+version = "2.0.3"
+edition = "2021"
+authors = ["DDAN"]
+rust-version = "1.80.0"
+documentation = "https://docs.rs/clang_log"
+readme = "README.md"
+repository = "https://github.com/DDAN-17/clang-log"
+keywords = ["clang", "log", "logging", "logger", "llvm"]
+categories = ["development-tools::debugging"]
+
+[dependencies]
+colored = "2.1.0"
+log = { version = "0.4.22", features = ["std"] }
