@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Check Clippy
+    - name: Check Format
       run: cargo fmt -- --check --verbose
   build-linux:
     runs-on: ubuntu-latest
