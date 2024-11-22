@@ -89,7 +89,7 @@ impl Log for Logger {
                     "trace".white().bold() // Clang doesn't have trace logs
                 }
             },
-            record.args().as_str().unwrap().bold()
+            format!("{}", record.args()).bold()
         );
     }
 
