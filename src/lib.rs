@@ -57,7 +57,7 @@ pub struct Logger {
     pub min_level: Level,
     /// Name of the program, set to "clang" in clang. (If clang used clang_log)
     pub prog_name: String,
-    /// Newline separator, inserted between every newline. Avoids many allocations by storing this as a field.
+    /// Constant newline separator, inserted between every newline. Avoids many allocations by storing this as a field.
     pub newline_sep: String,
 }
 
@@ -93,10 +93,7 @@ impl Log for Logger {
                     "trace:".white().bold() // Clang doesn't have trace logs
                 }
             },
-            record
-                .args()
-                .to_string()
-                .replace('\n', &self.newline_sep)
+            record.args().to_string().replace('\n', &self.newline_sep)
         );
     }
 
